@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flash News: informação com clareza e agilidade.">
+    <title>Flash News | Informação em foco</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container top-bar__inner">
+                <span>Informação com clareza e agilidade</span>
+                <span>Seu portal de notícias</span>
+            </div>
+        </div>
+
+        <div class="header-main container">
+            <a class="brand" href="#inicio">
+                <img src="imagens/WhatsApp Image 2026-10-20 at 23.17.48 (1).jpeg" alt="Logo Flash News"
+                    class="brand__logo">
+
+                <span class="brand__text">
+                    <strong>NOTÍCIAS</strong>
+                    <small>INFORMAÇÃO EM FOCO</small>
+                </span>
+            </a>
+
+            <form class="search" id="formBusca">
+                <input id="busca" type="search" placeholder="O que você quer encontrar?" aria-label="Buscar notícias">
+                <button type="submit" aria-label="Buscar">⌕</button>
+            </form>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a class="active" href="#inicio">Início</a></li>
+                    <li><a href="#brasil">Brasil</a></li>
+                    <li><a href="#mundo">Mundo</a></li>
+                    <li><a href="#economia">Economia</a></li>
+                    <li><a href="#esportes">Esportes</a></li>
+                    <li><a href="#entretenimento">Entretenimento</a></li>
+                    <li><a href="#tecnologia">Tecnologia</a></li>
+                    <li><a href="#favoritos" id="link-favoritos" aria-pressed="false">♡ Favoritos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="topic-bar">
+            <div class="container topic-bar__inner">
+                <strong class="topic-label">EM DESTAQUE</strong>
+                <a href="#brasil">Acompanhe as principais notícias</a>
+            </div>
+        </div>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500" data-bs-pause="hover" data-bs-touch="true">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=700&q=80"
+                        class="d-block w-100" alt="Brasil">
+
+                    <div class="carousel-caption-custom">
+                        <span class="categoria">BRASIL</span>
+                        <h2>Estudantes retomam protagonismo em momento decisivo no país</h2>
+                        <p>Participação dos jovens ganha destaque no debate público brasileiro.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=700&q=80" class="d-block w-100" alt="Mundial">
+                    <div class="carousel-caption-custom">
+                        <span class="categoria">Mundial</span>
+                        <h2>Pesquisa aponta queda na aprovação de Donald Trump</h2>
+                        <p>Levantamento Reuters/Ipsos registrou aprovação de 31% para o presidente americano.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=700&q=80" class="d-block w-100" alt="Economia">
+                    <div class="carousel-caption-custom">
+                        <span class="categoria">Economia</span>
+                        <h2>FMI prevê crescimento de 2,2% do PIB do Brasil em 2026</h2>
+                        <p>Fundo Monetário Internacional divulga projeção para a economia brasileira.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=80" class="d-block w-100" alt="Esportes">
+                    <div class="carousel-caption-custom">
+                        <span class="categoria">Esportes</span>
+                        <h2>Brasil avança a finais do Mundial de Ginástica</h2>
+                        <p>Ginastas brasileiras garantem presença em finais da competição mundial.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=700&q=80" class="d-block w-100" alt="Entretenimento">
+                    <div class="carousel-caption-custom">
+                        <span class="categoria">Entretenimento</span>
+                        <h2>Recife vai sediar festival de animação Animage.</h2>
+                        <p>Festival dedicado à animação levará produções e atividades culturais à capital pernambucana.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80" class="d-block w-100" alt="Tecnologia">
+                    <div class="carousel-caption-custom">
+                        <span class="categoria">Tecnologia</span>
+                        <h2>Professores usam inteligência artificial para inovar nas aulas</h2>
+                        <p>Ferramentas de IA são usadas para criar novas experiências de aprendizagem.</p>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev" aria-label="Notícia anterior">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next" aria-label="Próxima notícia">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Notícia 1"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Notícia 2"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Notícia 3"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3" aria-label="Notícia 4"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="4" aria-label="Notícia 5"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="5" aria-label="Notícia 6"></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-content">
+
+        <section id="inicio" class="welcome">
+            <p class="eyebrow">Flash News</p>
+            <h1>As notícias que importam, em um só lugar.</h1>
+            <p>Informação, atualidade e notícias para você.</p>
+        </section>
+
+        <div class="filters">
+            <div class="custom-select" id="categoria-custom">
+                <button type="button" class="select-button" aria-label="Filtrar por categoria" aria-haspopup="listbox" aria-expanded="false"><span>Todas as categorias</span><span aria-hidden="true">▾</span></button>
+                <ul class="select-options" role="listbox" aria-label="Categorias" hidden>
+                    <li role="option" tabindex="-1" data-value="Todas" aria-selected="true">Todas as categorias</li>
+                    <li role="option" tabindex="-1" data-value="Brasil" aria-selected="false">Brasil</li>
+                    <li role="option" tabindex="-1" data-value="Mundo" aria-selected="false">Mundo</li>
+                    <li role="option" tabindex="-1" data-value="Economia" aria-selected="false">Economia</li>
+                    <li role="option" tabindex="-1" data-value="Esportes" aria-selected="false">Esportes</li>
+                    <li role="option" tabindex="-1" data-value="Entretenimento" aria-selected="false">Entretenimento</li>
+                    <li role="option" tabindex="-1" data-value="Tecnologia" aria-selected="false">Tecnologia</li>
+                </ul>
+            </div>
+            <select id="categoria" aria-label="Filtrar por categoria" class="sr-only" tabindex="-1">
+                <option value="Todas">Todas as categorias</option><option value="Brasil">Brasil</option><option value="Mundo">Mundo</option><option value="Economia">Economia</option><option value="Esportes">Esportes</option><option value="Entretenimento">Entretenimento</option><option value="Tecnologia">Tecnologia</option>
+            </select>
+        </div>
+        <section id="brasil" class="news-section">
+            <h2>Brasil</h2>
+            <div class="news-grid">
+                <article class="news-card" data-categoria="Brasil">
+                    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=700&q=80"
+                        alt="Congresso Nacional em Brasília">
+                    <div class="conteudo">
+                        <span class="categoria">Brasil</span>
+                        <h3>Estudantes retomam protagonismo em momento decisivo no país</h3>
+                        <p>Participação dos jovens ganha destaque no debate público brasileiro.</p>
+                        <a class="botao" href="#brasil">Saiba mais</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="mundo" class="news-section">
+            <h2>Mundo</h2>
+            <div class="news-grid">
+                <article class="news-card" data-categoria="Mundo">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=700&q=80"
+                        alt="Cidade com construções históricas">
+                    <div class="conteudo">
+                        <span class="categoria">Mundo</span>
+                        <h3>Pesquisa aponta queda na aprovação de Donald Trump</h3>
+                        <p>Levantamento Reuters/Ipsos registrou aprovação de 31% para o presidente americano.</p>
+                        <a class="botao" href="#mundo">Saiba mais</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="economia" class="news-section">
+            <h2>Economia</h2>
+            <div class="news-grid">
+                <article class="news-card" data-categoria="Economia">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=700&q=80"
+                        alt="Gráficos financeiros">
+                    <div class="conteudo">
+                        <span class="categoria">Economia</span>
+                        <h3>FMI prevê crescimento de 2,2% do PIB do Brasil em 2026</h3>
+                        <p>Fundo Monetário Internacional divulga projeção para a economia brasileira.</p>
+                        <a class="botao" href="#economia">Saiba mais</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="esportes" class="news-section">
+            <h2>Esportes</h2>
+            <div class="news-grid">
+                <article class="news-card" data-categoria="Esportes">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=80"
+                        alt="Atletas em uma pista esportiva">
+                    <div class="conteudo">
+                        <span class="categoria">Esportes</span>
+                        <h3>Brasil avança a finais do Mundial de Ginástica</h3>
+                        <p>Ginastas brasileiras garantem presença em finais da competição mundial.</p>
+                        <a class="botao" href="#esportes">Saiba mais</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="entretenimento" class="news-section">
+            <h2>Entretenimento</h2>
+            <div class="news-grid">
+                <article class="news-card" data-categoria="Entretenimento">
+                    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=700&q=80"
+                        alt="Sala de cinema">
+                    <div class="conteudo">
+                        <span class="categoria">Entretenimento</span>
+                        <h3>Recife vai sediar festival de animação Animage</h3>
+                        <p>Festival dedicado à animação levará produções e atividades culturais à capital pernambucana.
+                        </p>
+                        <a class="botao" href="#entretenimento">Saiba mais</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="tecnologia" class="news-section">
+            <h2>Tecnologia</h2>
+            <div class="news-grid">
+                <article class="news-card" data-categoria="Tecnologia">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80"
+                        alt="Placa eletrônica e componentes tecnológicos">
+                    <div class="conteudo">
+                        <span class="categoria">Tecnologia</span>
+                        <h3>Professores usam inteligência artificial para inovar nas aulas</h3>
+                        <p>Ferramentas de IA são usadas para criar novas experiências de aprendizagem.</p>
+                        <a class="botao" href="#tecnologia">Saiba mais</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="favoritos" class="news-section" hidden>
+            <h2>♡ Favoritos</h2>
+            <div class="news-grid" id="grade-favoritos"></div>
+        </section>
+
+        <p class="mensagem" id="mensagem" hidden>
+            Nenhuma notícia encontrada.
+        </p>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Projeto escolar — Flash News</p>
+            <p>Notícias resumidas para fins educativos. Consulte as fontes originais.</p>
+        </div>
+    </footer>
+
+    <script>
+        const formBusca = document.getElementById("formBusca");
+        const busca = document.getElementById("busca");
+        const categoria = document.getElementById("categoria");
+        const cards = [...document.querySelectorAll(".news-card")];
+        const secoes = document.querySelectorAll(".news-section");
+        const mensagem = document.getElementById("mensagem");
+        const linkFavoritos = document.getElementById("link-favoritos");
+        const secaoFavoritos = document.getElementById("favoritos");
+        const gradeFavoritos = document.getElementById("grade-favoritos");
+        let favoritosOnly = false;
+        const chaveFavoritos = "flash-news-favoritos";
+        const favoritos = new Set(JSON.parse(localStorage.getItem(chaveFavoritos) || "[]"));
+
+        const noticias = {
+            Brasil: {
+                titulo: "Estudantes retomam protagonismo em momento decisivo no país",
+                resumo: "A União Nacional dos Estudantes destaca a participação dos jovens no debate público em um momento importante para o Brasil.",
+                detalhes: "A matéria destaca a presença de estudantes nas discussões públicas e a atuação de organizações juvenis. O tema envolve participação social, representação e o espaço das novas gerações nas decisões que afetam o país.",
+                fonte: "Agência Brasil — 18/10/2026",
+                link: "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/estudantes-retomam-protagonismo-em-momento-decisivo-no-pais-diz-une"
+            },
+            Mundo: {
+                titulo: "Pesquisa aponta aprovação de 31% para Donald Trump",
+                resumo: "Uma pesquisa Reuters/Ipsos apontou aprovação de 31% para o presidente dos Estados Unidos, um dos resultados mais baixos registrados pelo levantamento.",
+                detalhes: "O levantamento ouviu eleitores sobre a avaliação do governo e mostra o cenário político nos Estados Unidos. Os índices de aprovação são acompanhados de perto por analistas e ajudam a medir a percepção pública sobre a gestão.",
+                fonte: "Agência Brasil — 19/10/2026",
+                link: "https://agenciabrasil.ebc.com.br/ultimas"
+            },
+            Economia: {
+                titulo: "FMI prevê crescimento de 2,2% do PIB brasileiro em 2026",
+                resumo: "O Fundo Monetário Internacional estima expansão de 2,2% para a economia brasileira em 2026. Projeções econômicas ajudam a acompanhar as perspectivas para o país.",
+                detalhes: "A estimativa faz parte das projeções do relatório Perspectivas da Economia Mundial. O FMI considera indicadores como atividade, inflação e cenário internacional para avaliar o ritmo esperado da economia brasileira.",
+                fonte: "Agência Brasil — 13/10/2026",
+                link: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/fmi-preve-crescimento-de-22-do-pib-do-brasil-em-2026"
+            },
+            Esportes: {
+                titulo: "Brasil avança a finais do Mundial de Ginástica",
+                resumo: "Ginastas brasileiras avançaram a finais do Mundial de Ginástica, mantendo o país na disputa por resultados importantes na competição.",
+                detalhes: "A equipe brasileira garantiu presença em diferentes finais da competição, com destaque para as apresentações de Rebeca Andrade. A disputa reúne atletas de vários países e as finais definem as medalhas por aparelho.",
+                fonte: "Notícia esportiva — 19/10/2026",
+                link: "https://www.cnnbrasil.com.br/esportes/outros-esportes/com-brilho-de-rebeca-brasil-vai-a-cinco-finais-no-mundial-de-ginastica/"
+            },
+            Entretenimento: {
+                titulo: "Recife vai sediar festival de animação Animage",
+                resumo: "Recife foi anunciada como sede do Animage, festival que destaca produções de animação e atividades ligadas à cultura audiovisual.",
+                detalhes: "A programação do festival reúne filmes de animação e atividades para o público e profissionais do audiovisual. A iniciativa amplia a circulação de produções brasileiras e internacionais na capital pernambucana.",
+                fonte: "Agência Brasil — 17/10/2026",
+                link: "https://agenciabrasil.ebc.com.br/cultura/noticia/2026-10/recife-vai-sediar-maior-festival-de-animacao-do-brasil-o-animage"
+            },
+            Tecnologia: {
+                titulo: "Professores usam inteligência artificial para inovar nas aulas",
+                resumo: "Docentes utilizam ferramentas de inteligência artificial para inovar nas práticas de ensino e buscar maior participação dos alunos nas atividades.",
+                detalhes: "A reportagem apresenta experiências de professores que usam ferramentas de IA em atividades pedagógicas. O objetivo é aproximar os conteúdos da realidade dos estudantes e abrir espaço para discutir usos responsáveis da tecnologia.",
+                fonte: "Agência Brasil — 15/10/2026",
+                link: "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/docentes-usam-inteligencia-artificial-para-inovar-e-engajar-alunos"
+            }
+        };
+
+        function abrirResumo(card, botaoOrigem = null) {
+            const nomeCategoria = card.dataset.categoria;
+            const noticia = card.dataset.titulo ? {
+                titulo: card.dataset.titulo,
+                resumo: card.dataset.resumo,
+                detalhes: card.dataset.detalhes,
+                fonte: card.dataset.fonte,
+                link: card.dataset.link
+            } : noticias[nomeCategoria];
+            const grade = card.closest(".news-grid");
+
+            if (!noticia || !grade) return;
+
+            // Fecha qualquer outro resumo que esteja aberto.
+            document.querySelectorAll(".news-detail-lateral").forEach(painel => {
+                painel.remove();
+            });
+
+            document.querySelectorAll(".news-grid.com-resumo").forEach(item => {
+                item.classList.remove("com-resumo");
+            });
+
+            const painel = document.createElement("aside");
+            painel.className = "news-detail-lateral aberto";
+            painel.setAttribute("aria-live", "polite");
+            painel.setAttribute("aria-label", "Mais detalhes da notícia");
+
+            const imagem = document.createElement("img");
+            imagem.className = "news-detail-imagem";
+            imagem.src = card.querySelector("img")?.src || "";
+            imagem.alt = card.querySelector("img")?.alt || `Imagem: ${nomeCategoria}`;
+
+            const corpo = document.createElement("div");
+            corpo.className = "news-detail-corpo";
+
+            const fechar = document.createElement("button");
+            fechar.className = "fechar-resumo";
+            fechar.type = "button";
+            fechar.textContent = "×";
+            fechar.setAttribute("aria-label", "Fechar resumo");
+
+            fechar.addEventListener("click", () => {
+                painel.classList.remove("aberto");
+                painel.classList.add("fechando");
+                window.setTimeout(() => painel.remove(), 220);
+                grade.classList.remove("com-resumo");
+                botaoOrigem?.focus();
+            });
+
+            const etiqueta = document.createElement("span");
+            etiqueta.className = "categoria";
+            etiqueta.textContent = nomeCategoria;
+
+            const titulo = document.createElement("h3");
+            titulo.textContent = noticia.titulo;
+
+            const resumo = document.createElement("p");
+            resumo.className = "news-detail-resumo";
+            resumo.textContent = noticia.resumo;
+
+            const detalhes = document.createElement("p");
+            detalhes.className = "news-detail-texto";
+            detalhes.textContent = noticia.detalhes || "Este resumo apresenta os principais pontos da matéria. Acesse a publicação original para ler todos os detalhes e acompanhar possíveis atualizações.";
+
+            const fonte = document.createElement("p");
+            fonte.className = "fonte";
+            fonte.textContent = "Fonte: " + noticia.fonte;
+
+            const link = document.createElement("a");
+            link.href = noticia.link;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = "Ler matéria original ↗";
+            link.className = "news-detail-link";
+
+            corpo.append(etiqueta, titulo, resumo, detalhes, fonte, link);
+            painel.append(imagem, corpo, fechar);
+            grade.appendChild(painel);
+            grade.classList.add("com-resumo");
+            requestAnimationFrame(() => painel.scrollIntoView({ behavior: "smooth", block: "nearest" }));
+        }
+
+        function salvarFavoritos() {
+            localStorage.setItem(chaveFavoritos, JSON.stringify([...favoritos]));
+        }
+
+        function instalarFavoritos(card) {
+            if (!card.dataset.favId) card.dataset.favId = card.querySelector("h3").textContent.trim();
+            const botao = document.createElement("button");
+            botao.type = "button";
+            botao.className = "favoritar";
+            botao.setAttribute("aria-label", "Favoritar notícia");
+            card.prepend(botao);
+            const atualizar = () => {
+                const ativo = favoritos.has(card.dataset.favId);
+                botao.textContent = ativo ? "♥" : "♡";
+                botao.classList.toggle("ativo", ativo);
+                botao.setAttribute("aria-pressed", String(ativo));
+                botao.setAttribute("aria-label", ativo ? "Remover dos favoritos" : "Favoritar notícia");
+            };
+            atualizar();
+            botao.addEventListener("click", () => {
+                if (favoritos.has(card.dataset.favId)) favoritos.delete(card.dataset.favId);
+                else favoritos.add(card.dataset.favId);
+                salvarFavoritos();
+                atualizar();
+                renderizarFavoritos();
+                if (favoritosOnly) filtrarNoticias();
+            });
+        }
+
+        function renderizarFavoritos() {
+            gradeFavoritos.replaceChildren(...[...cards].filter(card => favoritos.has(card.dataset.favId)).map(card => card.cloneNode(true)));
+            gradeFavoritos.querySelectorAll(".favoritar").forEach(botao => botao.addEventListener("click", () => {
+                const id = botao.closest(".news-card").dataset.favId;
+                favoritos.delete(id); salvarFavoritos();
+                const original = [...cards].find(card => card.dataset.favId === id);
+                if (original) {
+                    const originalBotao = original.querySelector(".favoritar");
+                    originalBotao.textContent = "♡";
+                    originalBotao.classList.remove("ativo");
+                    originalBotao.setAttribute("aria-pressed", "false");
+                    originalBotao.setAttribute("aria-label", "Favoritar notícia");
+                }
+                renderizarFavoritos();
+            }));
+            secaoFavoritos.hidden = !favoritosOnly;
+            mensagem.hidden = !favoritosOnly || favoritos.size > 0;
+        }
+
+        cards.forEach(instalarFavoritos);
+        document.querySelectorAll(".news-card .botao").forEach(botao => {
+            botao.addEventListener("click", event => {
+                event.preventDefault();
+                abrirResumo(botao.closest(".news-card"), botao);
+            });
+        });
+
+        gradeFavoritos.addEventListener("click", event => {
+            const botao = event.target.closest(".news-card .botao");
+            if (!botao) return;
+            event.preventDefault();
+            abrirResumo(botao.closest(".news-card"), botao);
+        });
+
+        function filtrarNoticias() {
+            if (favoritosOnly) {
+                secoes.forEach(secao => secao.hidden = true);
+                renderizarFavoritos();
+                return;
+            }
+            secaoFavoritos.hidden = true;
+            const texto = busca.value.toLowerCase().trim();
+            const categoriaSelecionada = categoria.value;
+            let encontradas = 0;
+
+            cards.forEach(card => {
+                const titulo = card.querySelector("h3").textContent.toLowerCase();
+                const resumo = card.querySelector("p").textContent.toLowerCase();
+                const categoriaCard = card.dataset.categoria;
+
+                const correspondeTexto =
+                    titulo.includes(texto) ||
+                    resumo.includes(texto) ||
+                    categoriaCard.toLowerCase().includes(texto);
+
+                const correspondeCategoria =
+                    categoriaSelecionada === "Todas" ||
+                    categoriaCard === categoriaSelecionada;
+
+                const mostrar = correspondeTexto && correspondeCategoria;
+                card.hidden = !mostrar;
+
+                if (!mostrar) {
+                    const painel = card.closest(".news-grid")
+                        .querySelector(".news-detail-lateral");
+
+                    if (painel) painel.remove();
+
+                    card.closest(".news-grid").classList.remove("com-resumo");
+                }
+
+                if (mostrar) encontradas++;
+            });
+
+            secoes.forEach(secao => {
+                const cardsDaSecao = secao.querySelectorAll(".news-card");
+
+                secao.hidden = !Array.from(cardsDaSecao).some(card => !card.hidden);
+            });
+
+            mensagem.hidden = encontradas > 0;
+        }
+
+        formBusca.addEventListener("submit", event => {
+            event.preventDefault();
+            filtrarNoticias();
+        });
+
+        busca.addEventListener("input", filtrarNoticias);
+        const customSelect = document.getElementById("categoria-custom");
+        const selectButton = customSelect.querySelector(".select-button");
+        const optionsList = customSelect.querySelector(".select-options");
+        const customOptions = [...customSelect.querySelectorAll('[role="option"]')];
+
+        function fecharMenuCategoria(devolverFoco = false) {
+            optionsList.hidden = true;
+            selectButton.setAttribute("aria-expanded", "false");
+            if (devolverFoco) selectButton.focus();
+        }
+
+        selectButton.addEventListener("click", () => {
+            const aberto = selectButton.getAttribute("aria-expanded") === "true";
+            optionsList.hidden = aberto;
+            selectButton.setAttribute("aria-expanded", String(!aberto));
+            if (!aberto) customOptions.find(opcao => opcao.dataset.value === categoria.value).focus();
+        });
+
+        customOptions.forEach((opcao, indice) => {
+            opcao.addEventListener("click", () => {
+                selectButton.firstElementChild.textContent = opcao.textContent;
+                customOptions.forEach(item => item.setAttribute("aria-selected", String(item === opcao)));
+                categoria.value = opcao.dataset.value;
+                categoria.dispatchEvent(new Event("change", { bubbles: true }));
+                fecharMenuCategoria(true);
+            });
+            opcao.addEventListener("keydown", evento => {
+                if (evento.key === "ArrowDown" || evento.key === "ArrowUp") {
+                    evento.preventDefault();
+                    const passo = evento.key === "ArrowDown" ? 1 : -1;
+                    customOptions[(indice + passo + customOptions.length) % customOptions.length].focus();
+                } else if (evento.key === "Enter" || evento.key === " ") {
+                    evento.preventDefault();
+                    opcao.click();
+                } else if (evento.key === "Escape") fecharMenuCategoria(true);
+            });
+        });
+
+        document.addEventListener("click", evento => {
+            if (!customSelect.contains(evento.target)) fecharMenuCategoria();
+        });
+        categoria.addEventListener("change", filtrarNoticias);
+
+        linkFavoritos.addEventListener("click", event => {
+            event.preventDefault();
+            favoritosOnly = !favoritosOnly;
+            linkFavoritos.setAttribute("aria-pressed", String(favoritosOnly));
+            if (favoritosOnly) {
+                busca.value = "";
+                categoria.value = "Todas";
+            }
+            filtrarNoticias();
+            if (favoritosOnly) secaoFavoritos.scrollIntoView({ behavior: "smooth" });
+        });
+
+        document.querySelectorAll('.nav-links a:not(#link-favoritos)').forEach(link => link.addEventListener("click", () => {
+            if (favoritosOnly) {
+                favoritosOnly = false;
+                linkFavoritos.setAttribute("aria-pressed", "false");
+                filtrarNoticias();
+            }
+        }));
+
+        const noticiasReais = [
+            { categoria: "Brasil", titulo: "Governo atuará em casos de violência política após o segundo turno", resumo: "O governo federal informou que acompanhará 45 episódios de violência política registrados no fim de semana, incluindo dez homicídios.", detalhes: "Segundo o balanço divulgado pelo governo, os episódios foram registrados entre sábado e domingo após a divulgação do resultado eleitoral. A apuração reúne casos de agressão e mortes relacionados à intolerância política; as investigações ficam a cargo das autoridades competentes.", fonte: "Agência Brasil — 28/10/2026", link: "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/governo-federal-atuara-em-45-casos-de-violencia-politica-no-2o-turno", imagem: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Mundo", titulo: "Economia dos EUA cresce 3,4% no terceiro trimestre", resumo: "O PIB americano avançou a uma taxa anualizada de 3,4% entre julho e setembro, impulsionado pelo consumo e por investimentos em inteligência artificial.", detalhes: "A estimativa preliminar do Departamento de Comércio mostra aceleração em relação ao trimestre anterior. O consumo das famílias e os investimentos empresariais em inteligência artificial contribuíram para o resultado, embora a inflação e os custos de energia continuem entre os pontos de atenção.", fonte: "Associated Press — 29/10/2026", link: "https://apnews.com/article/ca48d86b723cc52fe14d142ee033316a", imagem: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Economia", titulo: "CNI reduz previsão de crescimento do PIB para 1,6% em 2026", resumo: "A Confederação Nacional da Indústria revisou para baixo sua projeção, citando demanda interna menor, crédito caro e custos de produção.", detalhes: "No informe do terceiro trimestre, a CNI também reduziu a estimativa para a indústria e para os serviços. A entidade aponta os juros elevados e a desaceleração da demanda como fatores que pressionam a atividade; para a agropecuária, a projeção foi revisada para cima.", fonte: "Agência Brasil — 28/10/2026", link: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-10/cni-reduz-previsao-de-crescimento-do-pib-para-16-em-2026", imagem: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Esportes", titulo: "Rebeca Andrade conquista o tri no Mundial de Ginástica", resumo: "A brasileira venceu o campeonato mundial de ginástica artística em Roterdã e alcançou o terceiro título na competição.", detalhes: "A medalha foi conquistada na edição de 2026 do Mundial, disputada na Holanda. O resultado amplia a trajetória de destaque da ginasta brasileira em campeonatos mundiais e reforça sua posição entre os principais nomes da modalidade.", fonte: "Agência Brasil — 24/10/2026", link: "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/rebeca-andrade-conquista-o-tri-no-mundial-de-ginastica-na-holanda", imagem: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Entretenimento", titulo: "Unesco reconhece três lugares de memória da escravidão no Brasil", resumo: "Cais do Valongo, Sociedade Protetora dos Desvalidos e Serra da Barriga passaram a integrar uma iniciativa internacional de memória.", detalhes: "Os três locais foram incluídos na Rede de Lugares de História e Memória relacionados à Escravidão e ao Tráfico de Pessoas Escravizadas. O reconhecimento destaca a preservação de espaços ligados à história da escravidão e à resistência negra no país.", fonte: "Ministério da Cultura — 28/10/2026", link: "https://www.gov.br/cultura/pt-br/assuntos/noticias/unesco-reconhece-tres-locais-de-memoria-da-escravidao-e-da-resistencia-negra-no-brasil/", imagem: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Tecnologia", titulo: "Professora usa inteligência artificial para engajar alunos", resumo: "Uma docente de Campinas criou, com IA generativa, uma atividade que retrata os alunos no futuro em profissões que sonham exercer.", detalhes: "A atividade foi feita com estudantes do quarto ano e partiu das profissões que as crianças gostariam de seguir. A professora usou uma ferramenta de IA para criar as imagens e estimular uma conversa sobre sonhos, carreira e aprendizagem.", fonte: "Agência Brasil — 15/10/2026", link: "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/docentes-usam-inteligencia-artificial-para-inovar-e-engajar-alunos", imagem: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Brasil", titulo: "Lula é reeleito presidente do Brasil", resumo: "O presidente Luiz Inácio Lula da Silva foi reeleito no segundo turno, segundo os resultados apurados pela Justiça Eleitoral.", detalhes: "Com a apuração praticamente concluída, o resultado confirmou a disputa apertada entre Lula e Flávio Bolsonaro. A cobertura detalha a votação, a mobilização da campanha no segundo turno e os próximos passos após a eleição.", fonte: "Agência Brasil — 25/10/2026", link: "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/lula-e-reeleito-presidente-do-brasil-em-virada-historica", imagem: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Mundo", titulo: "Navi Pillay recebe o Nobel da Paz de 2026", resumo: "A jurista sul-africana, ex-chefe de direitos humanos da ONU, foi reconhecida por sua atuação em defesa da justiça internacional.", detalhes: "A trajetória de Pillay inclui trabalho em instituições internacionais de justiça e na defesa dos direitos humanos. O comitê do Nobel destacou o papel da justiça internacional em um cenário de crescente contestação às normas e tribunais multilaterais.", fonte: "Associated Press — 09/10/2026", link: "https://apnews.com/article/f60744c07df969e50e9e69786fdb7de1", imagem: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Economia", titulo: "Prévia da inflação de outubro fica em 0,32%", resumo: "O IPCA-15 desacelerou em outubro. A alta dos alimentos foi parcialmente compensada pela queda da energia elétrica residencial.", detalhes: "O indicador, considerado uma prévia da inflação oficial, havia subido 0,70% em setembro. Em outubro, alimentação e bebidas tiveram alta, enquanto a conta de luz recuou com a mudança da bandeira tarifária.", fonte: "Agência Brasil — 23/10/2026", link: "https://agenciabrasil.ebc.com.br/radioagencia-nacional/economia/audio/2026-10/previa-da-inflacao-de-outubro-fica-em-032-puxada-por-alimentos", imagem: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Esportes", titulo: "Ancelotti convoca seleção para amistosos contra Japão e Singapura", resumo: "A lista para os últimos jogos do ano tem 26 atletas e quatro jogadores que ainda não haviam defendido a seleção principal.", detalhes: "Os amistosos estão marcados para 14 e 17 de novembro, em Singapura. A convocação também marca o retorno de Estêvão e abre espaço para novos nomes no grupo da seleção brasileira.", fonte: "Agência Brasil — 29/10/2026", link: "https://agenciabrasil.ebc.com.br/esportes/noticia/2026-10/ancelotti-convoca-selecao-para-amistosos-contra-japao-e-singapura", imagem: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Entretenimento", titulo: "Lei Rouanet recebe propostas culturais até 31 de outubro", resumo: "O Ministério da Cultura informou que o prazo para cadastrar projetos termina no sábado e não será prorrogado.", detalhes: "Proponentes precisam concluir o cadastro e conferir a documentação antes do encerramento do prazo. Quem não enviar a proposta até a data indicada terá de aguardar uma próxima oportunidade de inscrição.", fonte: "Agência Brasil — 27/10/2026", link: "https://agenciabrasil.ebc.com.br/radioagencia-nacional/cultura/audio/2026-10/inscricoes-de-projetos-culturais-pela-lei-rouanet-terminam-no-sabado", imagem: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=700&q=80" },
+            { categoria: "Tecnologia", titulo: "Estudantes criam plataformas para combater desinformação", resumo: "Três alunas de Recife desenvolveram ferramentas digitais para ajudar a avaliar conteúdos antes de compartilhá-los; o projeto venceu uma competição nacional de inovação.", detalhes: "Uma das ferramentas permite avaliar riscos de uma publicação antes de compartilhá-la; outra ajuda a checar notícias. As estudantes foram premiadas no HackaNAV 2026 com uma imersão tecnológica na Nasa.", fonte: "Agência Brasil — 17/10/2026", link: "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/estudantes-desenvolvem-plataformas-para-combater-desinformacao", imagem: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80" }
+        ];
+
+        noticiasReais.forEach((noticia, indice) => {
+            const secao = document.getElementById(noticia.categoria.toLowerCase());
+            const card = document.createElement("article");
+            card.className = "news-card";
+            card.dataset.categoria = noticia.categoria;
+            card.dataset.titulo = noticia.titulo;
+            card.dataset.resumo = noticia.resumo;
+            card.dataset.detalhes = noticia.detalhes;
+            card.dataset.fonte = noticia.fonte;
+            card.dataset.link = noticia.link;
+            card.dataset.favId = `real-${indice}`;
+            card.innerHTML = `<img src="${noticia.imagem}" alt=""><div class="conteudo"><span class="categoria">${noticia.categoria}</span><h3>${noticia.titulo}</h3><p>${noticia.resumo}</p><a class="botao" href="${noticia.link}" target="_blank" rel="noopener noreferrer">Saiba mais</a></div>`;
+            card.querySelector(".botao").addEventListener("click", event => {
+                event.preventDefault(); abrirResumo(card, event.currentTarget);
+            });
+            secao.querySelector(".news-grid").append(card);
+            cards.push(card);
+            instalarFavoritos(card);
+        });
+        renderizarFavoritos();
+    </script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
